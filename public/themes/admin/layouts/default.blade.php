@@ -10,9 +10,16 @@
     </head>
     <body>
         {!! Theme::partial('header') !!}
-
-        <div class="container">
-            {!! Theme::content() !!}
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div id="sidebar" class="col-xs-6 col-sm-4">
+                    {!! Theme::partial('sidebar') !!}
+                </div>
+                <div id="main" class="col-xs-6 col-sm-8">
+                    {!! Theme::content() !!}
+                </div>
+            </div>
         </div>
 
         {!! Theme::partial('footer') !!}

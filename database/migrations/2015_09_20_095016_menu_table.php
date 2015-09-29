@@ -12,11 +12,13 @@ class MenuTable extends Migration
      */
     public function up()
     {
-        Schema::table('menus', function (Blueprint $table) {
+        Schema::create('menus', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password', 60);
+            $table->string('url');
+            $table->string('type', 60);
+            $table->string('status');
+            $table->string('language');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -29,8 +31,6 @@ class MenuTable extends Migration
      */
     public function down()
     {
-        Schema::table('menus', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('menus');
     }
 }

@@ -17,6 +17,7 @@ class CreateLanguageTable extends Migration
             $table->string('language_price');
             $table->string('language_id');
             $table->string('language_title');
+            $table->string('status');
             $table->timestamps();
         });
     }
