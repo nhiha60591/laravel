@@ -58,23 +58,16 @@ return array(
         'beforeRenderTheme' => function($theme)
         {
             // You may use this event to set up your assets.
-            $theme->asset()->usePath()->add('bootstrap', 'css/bootstrap.min.css');
-            $theme->asset()->usePath()->add('bootstrap-theme', 'css/bootstrap-theme.min.css');
-            $theme->asset()->usePath()->add('jquery', 'js/jquery-2.1.4.min.js');
-            $theme->asset()->container('footer')->usePath()->add('jquery-bootstrap', 'js/bootstrap.min.js');
-            $theme->asset()->container('footer')->usePath()->add('affix', 'js/affix.js');
-            $theme->asset()->container('footer')->usePath()->add('alert', 'js/alert.js');
-            $theme->asset()->container('footer')->usePath()->add('button', 'js/button.js');
-            $theme->asset()->container('footer')->usePath()->add('carousel', 'js/carousel.js');
-            $theme->asset()->container('footer')->usePath()->add('collapse', 'js/collapse.js');
-            $theme->asset()->container('footer')->usePath()->add('dropdown', 'js/dropdown.js');
-            $theme->asset()->container('footer')->usePath()->add('modal', 'js/modal.js');
-            $theme->asset()->container('footer')->usePath()->add('popover', 'js/popover.js');
-            $theme->asset()->container('footer')->usePath()->add('scrollspy', 'js/scrollspy.js');
-            $theme->asset()->container('footer')->usePath()->add('tab', 'js/tab.js');
-            $theme->asset()->container('footer')->usePath()->add('tooltip', 'js/tooltip.js');
-            $theme->asset()->container('footer')->usePath()->add('transition', 'js/transition.js');
-            $theme->asset()->container('footer')->usePath()->add('admin', 'js/admin.js');
+            $theme->asset()->usePath()->add('bootstrap', 'bootstrap/css/bootstrap.min.css');
+            $theme->asset()->usePath()->add('bootstrap-responsive', 'bootstrap/css/bootstrap-responsive.min.css');
+            $theme->asset()->usePath()->add('easypiechart-easy-pie-chart', 'vendors/easypiechart/jquery.easy-pie-chart.css');
+            $theme->asset()->usePath()->add('bootstrap-theme', 'styles.css');
+            $theme->asset()->usePath()->add('modernizr-respond', 'vendors/modernizr-2.6.2-respond-1.1.0.min.js');
+            $theme->asset()->container('footer')->usePath()->add('jquery', 'vendors/jquery-1.9.1.min.js');
+            $theme->asset()->container('footer')->usePath()->add('jquery-bootstrap', 'bootstrap/js/bootstrap.min.js');
+            $theme->asset()->container('footer')->usePath()->add('easypiechart', 'vendors/easypiechart/jquery.easy-pie-chart.js');
+            $theme->asset()->container('footer')->usePath()->add('bootstrap-tab', 'bootstrap/js/tab.js');
+            $theme->asset()->container('footer')->usePath()->add('scripts', 'scripts.js');
             // $theme->asset()->add('jquery', 'vendor/jquery/jquery.min.js');
             // $theme->asset()->add('jquery-ui', 'vendor/jqueryui/jquery-ui.min.js', array('jquery'));
 

@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'assetUrl' => 'http://localhost/laravel/public',
+	'assetUrl' => 'http://localhost/laravel-github/public',
 
 	/*
 	|--------------------------------------------------------------------------

@@ -16,4 +16,5 @@ Route::get('/', 'FrontEnd\SiteController@getIndex');
 Route::group(['prefix' => 'admin'], function () {
 	Route::resource('/', 'BackEnd\SiteController');
     Route::resource('lang', 'BackEnd\MultiLanguageController');
+    Route::resource('menus', 'BackEnd\MenusController');
 });

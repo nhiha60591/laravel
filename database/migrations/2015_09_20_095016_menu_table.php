@@ -14,12 +14,22 @@ class MenuTable extends Migration
     {
         Schema::create('menus', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
             $table->string('url');
+            $table->string('image');
+            $table->string('class');
+            $table->string('html_id');            
+            $table->string('model');
             $table->string('type', 60);
-            $table->string('status');
-            $table->string('language');
-            $table->rememberToken();
+            $table->integer('status');
+            $table->timestamps();
+        });
+
+        Schema::create('menu_translations', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('menu_id');
+            $table->string('language_code');
+            $table->string('name');
+            $table->string('title');
             $table->timestamps();
         });
     }
@@ -32,5 +42,6 @@ class MenuTable extends Migration
     public function down()
     {
         Schema::drop('menus');
+        Schema::drop('menu_translations');
     }
 }
